@@ -58,6 +58,15 @@ app.get('/create-user', function(req, res){
 
 //req.session.auth = {userId: result.rows[0].id};
 
+app.get('/check-login', function(req, res){
+    if(req.session && req.session.auth && req.session.auth.userId){
+        res.send('You are logged in ' + req.session.auth.userId.toString());
+    }
+    else{
+        res.send('You are not logged in');
+    }
+})
+
 
 app.get('/article-one', function (req, res) {
   res.send("article-one");
