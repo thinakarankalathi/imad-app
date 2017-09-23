@@ -21,6 +21,12 @@ app.get('/counter', function(req, res){
 })
 
 
+app.get('test-db', function(req, res){
+    
+    
+    
+});
+
 app.get('/article-two', function (req, res) {
   res.send("article-two");
 });
