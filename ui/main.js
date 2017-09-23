@@ -2,6 +2,7 @@ console.log('Loaded!');
 //Counter codee
 
 var button =document.getElementById('counter');
+var counter = 0;
 button.onclick = function(){
     
     
