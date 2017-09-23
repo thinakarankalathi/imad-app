@@ -72,6 +72,11 @@ app.get('/article-one', function (req, res) {
   res.send("article-one");
 });
 
+app.get('/logout', function(req, res){
+    delete req.session.auth;
+    res.send("You are logged out");
+});
+
 var counter = 0;
 app.get('/counter', function(req, res){
     counter = counter + 1;
